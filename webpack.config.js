@@ -18,7 +18,10 @@ module.exports = {
     },
 
     devServer: {
-        static: "./"
+        static: "./",
+        open: true,
+        host: "127.0.0.1",
+        port: 80
     },
 
     plugins: [htmlplugin] //挂载插件的实例对象
