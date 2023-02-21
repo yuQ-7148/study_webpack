@@ -14,7 +14,7 @@ module.exports = {
 
     output: {
         path: path.join(__dirname, "./dist"), //输出文件的存放路径
-        filename: "bundle.js" //输出文件的名称
+        filename: "js/bundle.js" //输出文件的名称
     },
 
     devServer: {
