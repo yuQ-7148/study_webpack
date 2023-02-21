@@ -7,6 +7,10 @@ const htmlplugin = new HtmlPlugin({
     filename: "./index.html" //指定生成的文件的村放路径
 })
 
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+
+const cleanPlugin = new CleanWebpackPlugin()
+
 module.exports = {
     mode: 'development',  //mode用来指定构建模式，可选值有 development 和 production
 
@@ -24,7 +28,7 @@ module.exports = {
         port: 80
     },
 
-    plugins: [htmlplugin], //挂载插件的实例对象
+    plugins: [htmlplugin,cleanPlugin], //挂载插件的实例对象
 
     module: {  //所有第三方文件模块的匹配规则
         rules: [  //文件后缀名的匹配规则
