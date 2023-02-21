@@ -14,6 +14,10 @@ const cleanPlugin = new CleanWebpackPlugin()
 module.exports = {
     mode: 'development',  //mode用来指定构建模式，可选值有 development 和 production
 
+    // devtool: 'eval-source-map',
+    // devtool: 'nosources-source-map',
+    devtool: 'source-map',
+
     entry: path.join(__dirname, "./src/index.js"), //打包入口文件的路径
 
     output: {

@@ -9,6 +9,10 @@ $(function(){
     $('li:even').css('backgroundColor','cyan')
 })
 
+class Person {
+    static info = 'person info'
+}
 
+console.log(Person.info)
 
 
