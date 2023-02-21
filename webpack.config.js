@@ -29,7 +29,8 @@ module.exports = {
     module: {  //所有第三方文件模块的匹配规则
         rules: [  //文件后缀名的匹配规则
             { test: /\.css$/, use: ['style-loader', 'css-loader'] },
-            { test: /\.less$/, use: ['style-loader', 'css-loader', 'less-loader'] }
+            { test: /\.less$/, use: ['style-loader', 'css-loader', 'less-loader'] },
+            { test: /\.jpg|png|gif$/, type: 'asset' }
         ]
     }
 }
