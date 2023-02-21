@@ -9,11 +9,11 @@ const htmlplugin = new HtmlPlugin({
 
 module.exports = {
     mode: 'development',  //mode用来指定构建模式，可选值有 development 和 production
-    
-    entry: path.join(__dirname,"./src/index.js"), //打包入口文件的路径
+
+    entry: path.join(__dirname, "./src/index.js"), //打包入口文件的路径
 
     output: {
-        path: path.join(__dirname,"./dist"), //输出文件的存放路径
+        path: path.join(__dirname, "./dist"), //输出文件的存放路径
         filename: "bundle.js" //输出文件的名称
     },
 
@@ -24,6 +24,12 @@ module.exports = {
         port: 80
     },
 
-    plugins: [htmlplugin] //挂载插件的实例对象
+    plugins: [htmlplugin], //挂载插件的实例对象
+
+    module: {  //所有第三方文件模块的匹配规则
+        rules: [  //文件后缀名的匹配规则
+            { test: /\.css$/, use: ['style-loader', 'css-loader'] }
+        ]
+    }
 }
 
